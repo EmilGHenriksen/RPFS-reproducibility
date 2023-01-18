@@ -12,6 +12,8 @@ In this folder there are:
    - Was gained by running the original Tapaal search strategies on all models and queries 
  - `rpfs`
    - The binary used to generate our results
- 
+   - Running the binary is done as follows: `$BINARY -n -x $QUERY -s $STRAT $MODEL_PATH/model.pnml $MODEL_PATH/ReachabilityCardinality.xml` 
+     - Where `$STRAT` can be either 
+       - `RDFS`, `BestFS`, `DFS`, `BFS`, `PFS`, `DPFS`, `RPFS`
 
 All plots and tabels can be compiled by running the `Latex Files/compile_plots_tabels.sh` script.
