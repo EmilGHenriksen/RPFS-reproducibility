@@ -23,4 +23,5 @@ All plots and tabels can be compiled by running the `Latex Files/compile_plots_t
  2. Run `./reproduce/start rpfs $model_dir reproduce/results`
  3. All results will then bee added to `reproduce/results` 
  4. Then run `./reproduce/archiver reproduce/results`
-   - This will aggregate all the results into a single csv file name `reproduce/results/data.csv`  
+    - This will aggregate all the results into a single csv file name `data.csv`
+ 5. Swapping the file `Latex Files/data_nonreduced.csv` with `data.csv` and running `Latex Files/compile_plots_tabels.sh` will then create the figures and plots from the new data
