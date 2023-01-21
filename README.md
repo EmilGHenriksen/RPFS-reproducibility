@@ -1,6 +1,9 @@
 # RPFS Reproducability
 The models which were used to benchmark RPFS can be found at [MCC's website](https://mcc.lip6.fr/2022/models.php).
 
+The data file which all tables and plots are based on is found here: `latex/data_nonreduced.csv`.
+The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64.bin`, and all code for it can be found at this [repository](https://github.com/theodor349/P7-verifypn/tree/RPFS).
+
 ## Reproduce all tables and plots
 ### Requirements
  - .NET 6 Runtime
