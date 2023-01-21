@@ -19,7 +19,7 @@ In this directory there are:
 All plots and tabels can be compiled by running the `Latex Files/compile_plots_tabels.sh` script.
 
 ## Reproducing all results
- 1. Download all models into a directory `$model_dir` 
+ 1. Extract `XXX.zip` into a directory `$model_dir` 
  2. Run `./reproduce/start rpfs $model_dir reproduce/results`
  3. All results will then bee added to `reproduce/results` 
  4. Then run `./reproduce/archiver reproduce/results`
