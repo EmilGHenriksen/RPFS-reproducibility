@@ -17,11 +17,18 @@ In this directory there are:
        - `RDFS`, `BestFS`, `DFS`, `BFS`, `PFS`, `DPFS`, `RPFS`
 
 All plots and tabels can be compiled by running the `Latex Files/compile_plots_tabels.sh` script.
+This however, requires that `.Net6` has been installed.
 
 ## Reproducing all results
- 1. Extract `XXX.zip` into a directory `$model_dir` 
- 2. Run `./reproduce/start rpfs $model_dir reproduce/results`
+### Requirements 
+ - OS: Linux
+ - GNU time(1)
+ - GNU parallel(1)
+
+### Guide 
+ 1. Extract `reproduce/Models.tar.gz` into a directory `/reproduce/models` 
+ 2. Run `./reproduce/start`
  3. All results will then be added to `reproduce/results` 
- 4. Then run `./reproduce/archiver reproduce/results`
+ 4. Then run `./reproduce/archiver`
     - This will aggregate all the results into a single csv file name `data.csv`
- 5. Swapping the file `Latex Files/data_nonreduced.csv` with `data.csv` and running `Latex Files/compile_plots_tabels.sh` will then create the figures and plots from the new data
+ 5. Swapping the file `Latex Files/data_nonreduced.csv` with `data.csv` and running `Latex Files/compile_plots_tabels.sh` will then create the figures and plots from the new data (Requires `.Net6`)
