@@ -8,6 +8,9 @@ STRATEGIES=(
     "BestFS"
     "DFS"
     "BFS"
+    "PFS"
+    "DPFS"
+    "RPFS --seed-offset 4526035"
 )
 
 cd "$(dirname "$0")"
