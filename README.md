@@ -23,8 +23,8 @@ The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64
 
 ### Guide 
     git clone https://github.com/theodor349/RPFS-reproducibility
-    git lfs pull
     cd RPFS-reproducability
+    git lfs pull
     cd reproduce
     tar xf MCC2022.tar.gz       # Extract the MCC models
     ./start.sh                  # Generate all data (all models, all strategies)
