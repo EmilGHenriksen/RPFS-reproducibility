@@ -1,5 +1,5 @@
 # RPFS Reproducability
-The models which were used to benchmark RPFS can be found at the repository [pnmcc-models-2022](https://github.com/yanntm/pnmcc-models-2022).
+The models which were used to benchmark RPFS can be found at [yanntm/pnmcc-models-2022](https://github.com/yanntm/pnmcc-models-2022).
 
 The data file which all tables and plots are based on is found here: `latex/data_nonreduced.csv`.
 The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64.bin`, and all code for it can be found at [theodor349/P7-verifypn](https://github.com/theodor349/P7-verifypn/tree/RPFS).
