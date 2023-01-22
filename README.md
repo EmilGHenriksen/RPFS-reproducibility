@@ -26,6 +26,7 @@ The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64
     cd RPFS-reproducability
     git lfs pull
     cd reproduce
+    mkdir results
     tar xf MCC2022.tar.gz       # Extract the MCC models
     ./start.sh                  # Generate all data (all models, all strategies)
     ./archiver.sh               # Combine all data into a single `data.csv` file
