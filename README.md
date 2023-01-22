@@ -6,7 +6,7 @@ The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64
 
 ## Reproduce all tables and plots
 ### Requirements
- - .NET 6 Runtime
+ - .NET 6 Runtime + SDK
  - Git LFS
 
 ### Guide
@@ -21,7 +21,7 @@ The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64
  - OS: Linux
  - Git LFS
  - GNU time(1)
- - .NET 6 runtime
+ - .NET 6 runtime + SDK
 
 ### Guide 
     git clone https://github.com/theodor349/RPFS-reproducibility
