@@ -18,7 +18,9 @@ Note: The results from Table 2 cannot be generated or reproduced by this package
     cd latex
     ./compile-plots-tables.sh 
 
-## Reproducing all results
+## Generate table 1 (from scratch)
+Note: this will take a *long* time to run.
+
 ### Requirements 
  - OS: Linux
  - Git LFS
@@ -38,3 +40,15 @@ Note: The results from Table 2 cannot be generated or reproduced by this package
     mv reproduce/results/data.csv latex/data_nonreduced.csv
     cd latex
     ./compile-plots-tables.sh
+
+## Generate table 2 (from scratch)
+Note: this will take a *long* time to run.
+
+### Requirements 
+ - OS: Linux
+ - Git LFS
+ - GNU time(1)
+ - .NET 6 runtime + SDK
+
+### Guide 
+    not yet written
