@@ -7,6 +7,8 @@ The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64
 Note: The results from Table 2 cannot be generated or reproduced by this package. As this would require access the [DEIS](https://github.com/DEIS-Tools/DEIS-MCC) cluster at AAU.  
 
 ## Reproduce all tables and plots
+Follow the guide to produce table 1 and figures 3 + 4, using the precomputed results.
+
 ### Requirements
  - Git LFS
  - .NET 6 Runtime + SDK
@@ -18,7 +20,7 @@ Note: The results from Table 2 cannot be generated or reproduced by this package
     cd latex
     ./compile-plots-tables.sh 
 
-## Generate table 1, figure 3 + 4 (from scratch)
+## Generate table 1, figures 3 + 4 (from scratch)
 Note: this will take a *long* time to run.
 
 ### Requirements 
