@@ -5,9 +5,9 @@ The data file which all tables and plots are based on is found here: `latex/data
 The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64.bin`, and all code for it can be found at [theodor349/P7-verifypn](https://github.com/theodor349/P7-verifypn/tree/RPFS).
 
 ## Guides
-1. [Generate table 1, figures 3 + 4](https://github.com/theodor349/RPFS-reproducibility#generate-table-1-figures-3--4)
-2. [Generate table 1, figures 3 + 4 (from scratch)](https://github.com/theodor349/RPFS-reproducibility#generate-table-1-figures-3--4-from-scratch)
-3. [Generate table 2 (from scratch)](https://github.com/theodor349/RPFS-reproducibility#generate-table-2-from-scratch)
+1. [Generate table 1, figures 3 + 4](#generate-table-1-figures-3--4)
+2. [Generate table 1, figures 3 + 4 (from scratch)](#generate-table-1-figures-3--4-from-scratch)
+3. [Generate table 2 (from scratch)](#generate-table-2-from-scratch)
 
 ## Generate table 1, figures 3 + 4
 Follow the guide to produce table 1 and figures 3 + 4, using the precomputed results.
