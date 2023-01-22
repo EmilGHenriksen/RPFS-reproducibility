@@ -17,11 +17,13 @@ The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64
 ## Reproducing all results
 ### Requirements 
  - OS: Linux
+ - Git LFS
  - GNU time(1)
  - .NET 6 runtime
 
 ### Guide 
     git clone https://github.com/theodor349/RPFS-reproducibility
+    git lfs pull
     cd RPFS-reproducability
     cd reproduce
     tar xf MCC2022.tar.gz       # Extract the MCC models
