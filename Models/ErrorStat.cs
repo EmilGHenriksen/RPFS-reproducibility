@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3cca538e4d2124aa1c66e8a437bf5bca4679225974f89cb6bfea54a81645bf8b
-size 681
+﻿namespace Models
+{
+    public class ErrorStat
+    {
+
+        public ErrorStat(string strategy)
+        {
+            Strategy = strategy;
+        }
+
+        public string Strategy { get; set; }
+        public int TotalErrors { get; set; }
+        public int OurNoFormula { get; set; }
+        public int OurTimeout { get; set; }
+        public int Timeout { get; set; }            // 124
+        public int FailedAssertion { get; set; }    // 134
+        public int OutOffMemory { get; set; }       // 137
+        public int MainTryCatch { get; set; }       // 255 or -1
+        public int Segfault { get; set; }           // 139
+        public int Unknown { get; set; }
+    }
+}

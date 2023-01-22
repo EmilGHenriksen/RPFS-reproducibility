@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:564e5fc8c31b7321b2d6b3b4925feffe11f0e4d9b7f150d660a613025a8ea30e
-size 299
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FileHelpers" Version="3.5.2" />
+  </ItemGroup>
+
+</Project>

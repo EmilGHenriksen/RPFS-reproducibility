@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc066540272cc06f02a0582848dd61bc5abe767c8968f0b4a4ac2fd85b0bd522
-size 608
+﻿using Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataCruncher.Tabels
+{
+    internal class ThroughputStatsGenerator
+    {
+        public void PrintStats(List<ThroughputStatsGenerator> stats, string folder, string tableName)
+        {
+            var table = GenerateTable(stats);
+            File.WriteAllText(Path.Combine(folder, tableName + "_ThroughputStats.tab"), table);
+        }
+
+        private string GenerateTable(List<ThroughputStatsGenerator> stats)
+        {
+
+            return "";
+        }
+    }
+}

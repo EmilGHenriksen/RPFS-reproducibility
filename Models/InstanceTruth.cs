@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c2e89842b7245ddb98ca55e53cb44eaa90779024f688212ce6b9069b2483efa8
-size 516
+﻿using FileHelpers;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Models
+{
+    [DelimitedRecord("\t"), IgnoreFirst(1)]
+    public class InstanceTruth
+    {
+        public string Model { get; set; }
+        public int Query { get; set; }
+        public ExecutionResult Result { get; set; }
+
+        public string Key => GetKey(Model, Query);
+        public static string GetKey(string model, int query) => $"{model}_{query}";
+    }
+}

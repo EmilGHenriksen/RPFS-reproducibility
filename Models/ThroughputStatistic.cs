@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c518e8dc4c3b508a8e2ac2e412387bba3c1ffd533cd98665b6d3136dc9d706b7
-size 649
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Models
+{
+    public class ThroughputStatistic
+    {
+        public string Strategy { get; set; }
+        public SortedDictionary<string, double> Throughputs { get; set; }
+
+        public double TotalThroughput => Throughputs.Sum(x => x.Value);
+        public double AvgThroughput => TotalThroughput / Throughputs.Count;
+
+        public ThroughputStatistic(string strategy, SortedDictionary<string, double> throughputs)
+        {
+            Strategy = strategy;
+            Throughputs = throughputs;
+        }
+    }
+}
