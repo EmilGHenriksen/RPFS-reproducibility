@@ -7,10 +7,12 @@ The binary used for the benchmark is found here: `reproduce/bin/verifypn-linux64
 ## Reproduce all tables and plots
 ### Requirements
  - .NET 6 Runtime
+ - Git LFS
 
 ### Guide
     git clone https://github.com/theodor349/RPFS-reproducibility
     cd RPFS-reproducability
+    git lfs pull
     cd latex
     ./compile-plots-tables.sh 
 
