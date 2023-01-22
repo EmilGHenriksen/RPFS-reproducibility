@@ -18,7 +18,7 @@ Note: The results from Table 2 cannot be generated or reproduced by this package
     cd latex
     ./compile-plots-tables.sh 
 
-## Generate table 1 (from scratch)
+## Generate table 1, figure 3 + 4 (from scratch)
 Note: this will take a *long* time to run.
 
 ### Requirements 
