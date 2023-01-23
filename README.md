@@ -57,3 +57,14 @@ Note: this will take a *long* time to run.
 
 ### Guide 
     not yet written
+
+## Average expanded states
+Calculate the average number of expanded markings when RPFS is run 100000 times on the Petri net in figure 1, with the query `p3 >= 20`.
+
+Note: this may take up to 30 minutes to run (depending on hardware).
+
+### Guide 
+    git clone https://github.com/theodor349/RPFS-reproducibility
+    cd RPFS-reproducability
+    cd reproduce/expanded-states
+    ./exp.sh
