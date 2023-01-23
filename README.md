@@ -64,6 +64,10 @@ Calculate the average number of expanded markings when RPFS is run 100000 times 
 
 Note: this may take up to 30 minutes to run (depending on hardware).
 
+### Requirements 
+ - OS: Linux
+ - GNU bc(1)
+
 ### Guide 
     git clone https://github.com/theodor349/RPFS-reproducibility
     cd RPFS-reproducability
