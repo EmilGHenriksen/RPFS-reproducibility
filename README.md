@@ -60,7 +60,7 @@ Note: this will take a *long* time to run.
     not yet written
 
 ## Average expanded states
-Calculate the average number of expanded markings when RPFS is run 100000 times on the Petri net in figure 1, with the query `p3 >= 20`.
+Calculate the average number of expanded markings when RPFS is run 100000 times on the Petri net in figure&nbsp;1, with the query `p3 >= 20`.
 
 Note: this may take up to 30 minutes to run (depending on hardware).
 
