@@ -1,6 +1,6 @@
 ﻿using DataCruncher.Plots;
 using DataCruncher.ResultTypes;
-using DataCruncher.Tabels;
+using DataCruncher.Tables;
 using DataCruncher.Utilities;
 using Models;
 using System;
@@ -41,7 +41,7 @@ namespace DataCruncher
 
             Printer.PrintSpace();
 
-            Tabels();
+            Tables();
             Appendix_B();
         }
 

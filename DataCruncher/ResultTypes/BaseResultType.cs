@@ -1,5 +1,5 @@
 ﻿using DataCruncher.Plots;
-using DataCruncher.Tabels;
+using DataCruncher.Tables;
 using DataCruncher.Utilities;
 using Models;
 using System;

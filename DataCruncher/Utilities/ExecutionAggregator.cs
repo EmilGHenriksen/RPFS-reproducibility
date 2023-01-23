@@ -1,4 +1,4 @@
-﻿using DataCruncher.Tabels;
+﻿using DataCruncher.Tables;
 using Models;
 using System;
 using System.Collections.Generic;

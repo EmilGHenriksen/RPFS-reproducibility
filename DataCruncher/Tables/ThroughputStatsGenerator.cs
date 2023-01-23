@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataCruncher.Tabels
+namespace DataCruncher.Tables
 {
     internal class ThroughputStatsGenerator
     {
