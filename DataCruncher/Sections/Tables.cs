@@ -43,22 +43,9 @@ namespace DataCruncher
         private void Tab2(string folder)
         {
             Printer.PrintHeader("Table 2");
-            var executions = GetBaselineAndRpfsExecutions(Copy(NonreducedData.DifficultExecutions));
-
-
-            var baseline = GetBaseLineExecutions(Copy(NonreducedData.DifficultExecutions));
-            var baselineVirtualBest = _virtualBestAdder.GetVirtualBest(baseline);
-            foreach (var e in baselineVirtualBest)
-                e.Strategy = Execution.VirtualBestName + " Standard";
-
-            var allVirtualbest = _virtualBestAdder.GetVirtualBest(executions);
-            foreach (var e in allVirtualbest)
-                e.Strategy = Execution.VirtualBestName + " All";
-            executions.AddRange(baselineVirtualBest);
-            executions.AddRange(allVirtualbest);
-
-            var strats = Execution.GetStrategies(executions);
-            _statsGenerator.PrintStats(Copy(executions), folder, "Table 1", baseline);
+            _competitionTableGenerator.Print(folder, "Table 2", CompetitionData);
         }
+
+
     }
 }

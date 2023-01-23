@@ -17,8 +17,10 @@ namespace DataCruncher
         static int ShrinkDigits = 8;
         public Dataset ReducedData;
         public Dataset NonreducedData;
+        public CompetitionDataSet CompetitionData;
 
         private StatsGenerator _statsGenerator = new StatsGenerator();
+        private CompetitionTableGenerator _competitionTableGenerator = new CompetitionTableGenerator();
         private ExecutionAggregator _aggregator = new ExecutionAggregator();
         private RatioPlotter _ratioPlotter = new RatioPlotter();
         private CactusPlotter _cactusPlotter = new CactusPlotter();
@@ -27,10 +29,11 @@ namespace DataCruncher
         private MinMedianMaxPlotter _minMedianMaxPlotter = new MinMedianMaxPlotter();
         private SolvedOverTimePlotter _solvedOverTimePlotter = new SolvedOverTimePlotter();
 
-        public Cruncher(string nonreducedDataFilepath, string reducedDataFilepath, string truthFilepath)
+        public Cruncher(string nonreducedDataFilepath, string reducedDataFilepath, string truthFilepath, string competitionFilepath)
         {
             Printer.PrintLine("Loading Data");
 
+            CompetitionData = LoadCompetitionData(competitionFilepath);
             ReducedData = LoadReducedData(reducedDataFilepath);
             NonreducedData = LoadNonreducedData(nonreducedDataFilepath);
             UpdateDatasetsWithDifficultExecutions(NonreducedData, ReducedData);
@@ -43,6 +46,14 @@ namespace DataCruncher
 
             Tables();
             Appendix_B();
+        }
+
+        private CompetitionDataSet LoadCompetitionData(string competitionFilepath)
+        {
+            var data = new CompetitionDataSet();
+            data.Cardinality = new CompetitionEntry(20308, 20471);
+            data.Fireability= new CompetitionEntry(19541, 19894);
+            return data;
         }
 
         private void AddVirtualBest(List<Execution> executions)
