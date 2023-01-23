@@ -8,6 +8,7 @@ The binary used for the benchmark is found at `reproduce/bin/verifypn-linux64.bi
 - [Generate table 1, figures 3 + 4](#generate-table-1-figures-3--4)
 - [Generate table 1, figures 3 + 4 (from scratch)](#generate-table-1-figures-3--4-from-scratch)
 - [Generate table 2 (from scratch)](#generate-table-2-from-scratch)
+- [Average expanded states](#average-expanded-states)
 
 ## Generate table 1, figures 3 + 4
 Follow the guide to produce table 1 and figures 3 + 4, using the precomputed results.
