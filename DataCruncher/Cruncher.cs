@@ -8,6 +8,7 @@ using System.Collections.Immutable;
 using System.Net.Http.Headers;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
+using System.Text.RegularExpressions;
 
 namespace DataCruncher
 {
@@ -51,8 +52,12 @@ namespace DataCruncher
         private CompetitionDataSet LoadCompetitionData(string competitionFilepath)
         {
             var data = new CompetitionDataSet();
-            data.Cardinality = new CompetitionEntry(20308, 20471);
-            data.Fireability= new CompetitionEntry(19541, 19894);
+            var file = File.ReadAllText(competitionFilepath);
+            var regex = new Regex("-> [0-9]+");
+
+            var matches = regex.Matches(file);
+            data.Cardinality = new CompetitionEntry(int.Parse(matches[0].Value.Substring(3)), int.Parse(matches[1].Value.Substring(3)));
+            data.Fireability= new CompetitionEntry(int.Parse(matches[2].Value.Substring(3)), int.Parse(matches[3].Value.Substring(3)));
             return data;
         }
 
