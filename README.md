@@ -55,7 +55,7 @@ Note: this will take a *very long* time to run.
 ### Requirements 
  - OS: Linux
  - Git LFS
- - time(1), timeout(1), parallel(1), bc(1)  
+ - time(1), timeout(1), parallel(1), bc(1), awk(1)
  - .NET 6 runtime + SDK
 
 ### Guide 
@@ -65,8 +65,12 @@ Note: this will take a *very long* time to run.
     cd reproduce
     tar xf MCC2022.tar.gz       # Extract the MCC models
     cd competition
-
-    ...
+    ./run-comp.sh               # Start the competition benchmark
+    ./compare.sh                # Check consistency and write statistics to `stats.txt`
+    cd ../..
+    mv reproduce/competition/stats.txt latex/CompetitionResults.txt
+    cd latex
+    ./run-cdpr.sh
 
 ## Average expanded states
 Calculate the average number of expanded markings when RPFS is run 100000 times on the Petri net in figure&nbsp;1, with the query `p3 >= 20`.
