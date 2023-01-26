@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd "$(dirname "$0")"
-BINARY="../bin/verifypn-linux64"
+BINARY="../bin/RPFS"
 
 N=100000
 sum=0

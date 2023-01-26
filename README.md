@@ -2,7 +2,7 @@
 The models which were used to benchmark RPFS can be found at [yanntm/pnmcc-models-2022](https://github.com/yanntm/pnmcc-models-2022).
 
 The data file which all tables and plots are based on is found here: `latex/data_nonreduced.csv`.
-The binary used for the benchmark is found at `reproduce/bin/verifypn-linux64.bin`, and all code for it can be found at [theodor349/P7-verifypn](https://github.com/theodor349/P7-verifypn/tree/RPFS).
+The binary used for the benchmark is found at `reproduce/bin/RPFS.bin`, and all code for it can be found at [theodor349/P7-verifypn](https://github.com/theodor349/P7-verifypn/tree/RPFS).
 
 ## Guides
 - [Generate all tables and figures](#generate-all-tables-and-figures)
@@ -22,7 +22,7 @@ Follow the guide to produce all tables and figures, using precomputed results.
     cd RPFS-reproducability
     git lfs pull
     cd latex
-    ./compile-plots-tables.sh 
+    ./run-cdpr.sh 
 
 ## Generate table 1, figures 3 + 4 (from scratch)
 Note: this will take a *long* time to run.
@@ -30,7 +30,7 @@ Note: this will take a *long* time to run.
 ### Requirements 
  - OS: Linux
  - Git LFS
- - GNU time(1)
+ - GNU time(1), timeout(1)
  - .NET 6 runtime + SDK
 
 ### Guide 
@@ -38,14 +38,14 @@ Note: this will take a *long* time to run.
     cd RPFS-reproducability
     git lfs pull
     cd reproduce
-    mkdir results
     tar xf MCC2022.tar.gz       # Extract the MCC models
+    cd general 
     ./start.sh                  # Generate all data (all models, all strategies)
     ./archiver.sh               # Combine all data into a single `data.csv` file
-    cd ..
-    mv reproduce/results/data.csv latex/data_nonreduced.csv
+    cd ../..
+    mv reproduce/general/results/data.csv latex/data_nonreduced.csv
     cd latex
-    ./compile-plots-tables.sh
+    ./run-cdpr.sh
 
 ## Generate table 2 (from scratch)
 Run the competition benchmark with and without RPFS, and produce a table comparing the results.
@@ -61,6 +61,10 @@ Note: this will take a *long* time to run.
 ### Guide 
     git clone https://github.com/theodor349/RPFS-reproducibility
     cd RPFS-reproducability
+    git lfs pull
+    cd reproduce
+    tar xf MCC2022.tar.gz       # Extract the MCC models
+    cd competition
 
     ...
 
