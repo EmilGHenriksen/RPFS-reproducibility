@@ -48,16 +48,21 @@ Note: this will take a *long* time to run.
     ./compile-plots-tables.sh
 
 ## Generate table 2 (from scratch)
+Run the competition benchmark with and without RPFS, and produce a table comparing the results.
+
 Note: this will take a *long* time to run.
 
 ### Requirements 
  - OS: Linux
  - Git LFS
- - GNU time(1)
+ - time(1), timeout(1), parallel(1), bc(1)  
  - .NET 6 runtime + SDK
 
 ### Guide 
-    not yet written
+    git clone https://github.com/theodor349/RPFS-reproducibility
+    cd RPFS-reproducability
+
+    ...
 
 ## Average expanded states
 Calculate the average number of expanded markings when RPFS is run 100000 times on the Petri net in figure&nbsp;1, with the query `p3 >= 20`.
