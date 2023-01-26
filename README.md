@@ -50,7 +50,7 @@ Note: this will take a *long* time to run.
 ## Generate table 2 (from scratch)
 Run the competition benchmark with and without RPFS, and produce a table comparing the results.
 
-Note: this will take a *long* time to run.
+Note: this will take a *very long* time to run.
 
 ### Requirements 
  - OS: Linux
