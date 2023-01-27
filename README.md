@@ -29,7 +29,7 @@ Follow the guide to produce all tables and figures, using precomputed results.
 > **Warning**
 >
 > The results used in the paper were computed using a CPU cluster. 
-> This will take a **long** time to run on a single CPU.
+> This will take a *long* time to run on a single CPU.
 
 ### Requirements 
  - OS: Linux
@@ -57,7 +57,7 @@ Run the competition benchmark with and without RPFS, and produce a table compari
 > **Warning**
 >
 > The results used in the paper were computed using a CPU cluster. 
-> This will take a **very long** time to run on a single CPU.
+> This will take a *very long* time to run on a single CPU.
 
 ### Requirements 
  - OS: Linux
