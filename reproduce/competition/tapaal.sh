@@ -34,6 +34,19 @@ else
 	echo "Got TEMPDIR=$TEMPDIR"
 fi
 
+if [ -z "$USE_RPFS" ]; then
+	USE_RPFS=false
+	echo "Setting USE_RPFS=$USE_RPFS"
+else
+	echo "Got USE_RPFS=$USE_RPFS"
+fi
+
+if $USE_RPFS; then
+    BESTFS=RPFS
+else 
+    BESTFS=BestFS
+fi
+
 TIMEOUT_CMD=timeout
 TIME_CMD="/usr/bin/time -f \"@@@%e,%M@@@\" "
 
@@ -77,7 +90,7 @@ STRATEGIES_SEQ[1]="-tar -q 0 -d $SHORTRED"
 STRATEGY_MULTI="-s BFS -q 15 -l 3 -d $SHORTRED"
 
 STRATEGIES_PAR[0]="-tar -s RDFS -q 0 -l 0 -d $SHORTRED"
-STRATEGIES_PAR[1]="-s BestFS -q 0 -l 0 -d $SHORTRED"
+STRATEGIES_PAR[1]="-s $BESTFS -q 0 -l 0 -d $SHORTRED"
 STRATEGIES_PAR[2]="-s BFS -q 0 -l 0 -d $SHORTRED"
 STRATEGIES_PAR[3]="-s DFS -q 0 -l 0 -d $SHORTRED"
 
@@ -390,7 +403,7 @@ function LTL {
     STRATEGIES_PAR[2]="-ltl tarjan --ltl-heur aut -s DFS -p -q 0 -l 0 -d $SHORTRED"
     STRATEGIES_PAR[3]="-ltl ndfs -q 0 -l 0 -d $SHORTRED"
     unset STRATEGIES_SEQ
-    STRATEGIES_SEQ[0]="-ltl tarjan -q 40 -l 5 -d $SHORTRED -s BestFS --ltl-por automaton --ltl-heur aut"
+    STRATEGIES_SEQ[0]="-ltl tarjan -q 40 -l 5 -d $SHORTRED -s $BESTFS --ltl-por automaton --ltl-heur aut"
     unset STRATEGIES_RAND
     STRATEGIES_RAND[0]="-ltl tarjan -s RDFS --seed-offset 0 -p -q 0 -l 0 -d $SHORTRED"
     STRATEGIES_RAND[1]="-ltl tarjan -s RDFS --seed-offset 1337 -p -q 0 -l 0 -d $SHORTRED"
