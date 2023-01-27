@@ -25,7 +25,11 @@ Follow the guide to produce all tables and figures, using precomputed results.
     ./run-cdpr.sh 
 
 ## Generate table 1, figures 3 + 4 (from scratch)
-Note: this will take a *long* time to run.
+
+> **Warning**
+>
+> The results used in the paper were computed using a CPU cluster. 
+> This will take a **long** time to run on a single CPU.
 
 ### Requirements 
  - OS: Linux
@@ -50,7 +54,10 @@ Note: this will take a *long* time to run.
 ## Generate table 2 (from scratch)
 Run the competition benchmark with and without RPFS, and produce a table comparing the results.
 
-The results used in the paper were computed using a CPU cluster. This will take a *very long* time to run on a single CPU.
+> **Warning**
+>
+> The results used in the paper were computed using a CPU cluster. 
+> This will take a **very long** time to run on a single CPU.
 
 ### Requirements 
  - OS: Linux
