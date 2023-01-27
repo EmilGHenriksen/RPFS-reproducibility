@@ -50,7 +50,7 @@ Note: this will take a *long* time to run.
 ## Generate table 2 (from scratch)
 Run the competition benchmark with and without RPFS, and produce a table comparing the results.
 
-Note: this will take a *very long* time to run.
+The results used in the paper were computed using a CPU cluster. This will take a *very long* time to run on a single CPU.
 
 ### Requirements 
  - OS: Linux
